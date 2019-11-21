@@ -1,0 +1,56 @@
+<div id="app">
+  <aside>
+    <h1 class="nobottom">Azure + Github in action</h1>
+ 
+    <hr>
+    <div *ngIf="!image else showImage">
+      <h2 class="nomargin">Select an image:
+        <input type="file" name="file" id="file" class="inputfile" (change)="fileUpload($event.target.files)" />
+        <label for="file">+</label>
+      </h2>
+    </div>
+    <ng-template #showImage>
+      <img [src]="image" />
+    </ng-template>
+    <section *ngIf="image && !noFace">
+      <div *ngIf="this.thing else elseBlock">
+        <h3>Highest Result: {{result}}</h3>
+        <button (click)="removeImage()">Try it again!</button>
+      </div>
+      <ng-template #elseBlock>
+        Loading...
+      </ng-template>
+    </section>
+    <section *ngIf="noFace">
+      <p>No face was detected!</p>
+      <button (click)="removeImage()">Try again!</button>
+    </section>
+    <h1>Output</h1>
+    <section *ngIf="image">
+      <table>
+        <tr>
+          <th>Face</th>
+          <th>Anger</th>
+          <th>Contempt</th>
+          <th>Disgust</th>
+          <th>Fear</th>
+          <th>Happiness</th>
+          <th>Neutral</th>
+          <th>Sadness</th>
+        </tr>
+        <ng-container>
+          <tr *ngFor="let value of output; index as i">
+            <td>{{i}}</td>
+            <td>{{value.faceAttributes.emotion.anger}}</td>
+            <td>{{value.faceAttributes.emotion.anger}}</td>
+            <td>{{value.faceAttributes.emotion.disgust}}</td>
+            <td>{{value.faceAttributes.emotion.fear}}</td>
+            <td>{{value.faceAttributes.emotion.happiness}}</td>
+            <td>{{value.faceAttributes.emotion.neutral}}</td>
+            <td>{{value.faceAttributes.emotion.sadness}}</td>
+          </tr>
+        </ng-container>
+      </table>
+    </section>
+  </aside>
+</div>

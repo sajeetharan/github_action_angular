@@ -1,0 +1,187 @@
+/* Add application styles & imports to this file! */
+
+/*
+  Code has been adapted (with permission) for Angular from Sarah Drasner's Vue.js Azure Emotion API on CodePen
+  Sarah: https://twitter.com/sarah_edo
+  CodePen: https://codepen.io/sdras/details/dZOdpv
+*/
+
+body {
+    background: rgb(0, 2, 95);
+    color: white;
+    padding: 20px;
+  }
+  
+  * {
+    font-family: 'Lato', helvetica, sans-serif;
+  }
+  
+  button {
+    background: #AB081E;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    margin: 10px 0;
+  }
+  
+  p, h3 {
+    margin: 5px 0 0;
+  }
+  
+  h2 {
+    font-weight: 300;
+  }
+  
+  hr {
+    opacity: 0.2;
+    width: 100%;
+    margin-top: 25px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ef9d0e;
+  }
+  
+  #canvas {
+    width: 95%;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 700px;
+    margin-left: 30px;
+    margin-top: 0;
+  }
+  
+  /* base layout start */
+  #app {
+    display: flex;
+  }
+  
+  aside {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 600px) {
+    aside {
+      height: 100vh;
+    }
+    main {
+      height: 100vh;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #app {
+      display: block;
+    }
+    aside {
+      width: 100vw;
+    }
+    main {
+      width: 100vw;
+      height: 300px;
+    }
+    #canvas {
+      width: 85%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .nomobile {
+      display: none;
+    }
+  }
+  
+  /* base layout end */
+  
+  img {
+    width: 300px;
+    border: 1px solid #777;
+    margin: 15px 0;
+  }
+  
+  .inputfile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+  }
+  
+  .inputfile + label {
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    background-color: #222;
+    padding: 14px 20px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #666;
+    transition: 0.3s all ease-out;
+  }
+  
+  .inputfile:focus + label,
+  .inputfile + label:hover {
+    background-color: teal;
+  }
+  
+  .inputfile + label {
+      cursor: pointer; /* "hand" cursor */
+  }
+  
+  .inputfile:focus + label {
+      outline: 1px dotted #000;
+      outline: -webkit-focus-ring-color auto 5px;
+  }
+  
+  .inputfile + label * {
+      pointer-events: none;
+  }
+  
+  .nobottom {
+    margin-bottom: 0;
+  }
+  
+  .bottom10 {
+    margin-bottom: 10px;
+  }
+  
+  .nomargin {
+    margin: 10px 0;
+  }
+  
+  .useone {
+    margin-top: -18px;
+    cursor: pointer;
+    color: #efdabf;
+    transition: 0.25s all ease;
+    /* &:hover {
+      color: #ef9d0e;
+    } */
+  }
+  
+  .useone :hover {
+    color: #ef9d0e;
+  }
+  
+  .loading {
+    animation: load 1s infinite both;
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes load {
+    35% {
+      opacity: 0.35;
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
