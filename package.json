@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "deploy": "node --version",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
