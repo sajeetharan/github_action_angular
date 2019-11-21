@@ -59,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngColomboAI:build"
+            "browserTarget": "angulargithubaction:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngColomboAI:build:production"
+              "browserTarget": "angulargithubaction:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngColomboAI:build"
+            "browserTarget": "angulargithubaction:build"
           }
         },
         "test": {
@@ -113,11 +113,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngColomboAI:serve"
+            "devServerTarget": "angulargithubaction:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngColomboAI:serve:production"
+              "devServerTarget": ":serve:production"
             }
           }
         },
@@ -133,5 +133,5 @@
       }
     }
   },
-  "defaultProject": "ngColomboAI"
+  "defaultProject": "ng"
 }

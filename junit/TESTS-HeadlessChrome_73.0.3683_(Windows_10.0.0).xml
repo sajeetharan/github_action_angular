@@ -19,7 +19,7 @@
     at resolveDep (node_modules/@angular/core/fesm5/core.js:22277:1)
 </failure>
   </testcase>
-  <testcase name="AppComponent should have as title 'ngColomboAI'" time="0.055" classname="HeadlessChrome_73_0_3683_(Windows_10_0_0).AppComponent">
+  <testcase name="AppComponent should have as title 'angulargithubaction'" time="0.055" classname="HeadlessChrome_73_0_3683_(Windows_10_0_0).AppComponent">
     <failure type="">Error: StaticInjectorError(DynamicTestModule)[AppComponent -&gt; HttpClient]: 
   StaticInjectorError(Platform: core)[AppComponent -&gt; HttpClient]: 
     NullInjectorError: No provider for HttpClient!
